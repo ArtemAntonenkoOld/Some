@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace ConsoleApplication5
 {
     [Serializable]
+
     class SerializeModel
     {
-        
-        
+
+        static bool hui;
             public double Number2 { get; set; }
             public double Number1 { get; set; }
             public char Operation { get; set; }
