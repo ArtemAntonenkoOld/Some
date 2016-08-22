@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 namespace ConsoleApplication5
 {
     public enum Types { Int, Double };
-
+    //struct TypeConfig 
+    //{
+    //    static Dictionary<Types,Tuple<Type>> 
+    //}
     class CalculationInstanceFactory
     {
 
@@ -24,31 +27,17 @@ namespace ConsoleApplication5
             }
         }
 
-        public static object GetInstance(Types item)
+        public ICalc<TType> GetInstance<TType>(TType item)
         {
-            
-            switch (item)
+            ICalc<TType> result = null; 
+            if (item.GetType() == typeof(Double))
             {
-                
-                case Types.Double:
-                Console.WriteLine("Введите значения");
-                DoubleCalc o = new DoubleCalc(
-                Convert.ToDouble(Console.ReadLine()), 
-                Convert.ToDouble(Console.ReadLine())
-                );
-                    return o.Summ();
+                DoubleCalc calc = new DoubleCalc();
+                return (ICalc<TType>)calc;
+                //return calc as ICalc<TType>;
 
-                case Types.Int:
-                Console.WriteLine("Введите значения");
-                IntCalc p = new IntCalc(
-                Convert.ToInt16(Console.ReadLine()),
-                Convert.ToInt16(Console.ReadLine())
-                );
-                    return p.Summ();
-
-                default:
-                    throw new ArgumentOutOfRangeException("T");
             }
+            return null;
         }
     }
 }

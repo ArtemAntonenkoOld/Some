@@ -6,35 +6,43 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
+    public class Calcitem<TType>
+    {
+        public double Val1 { get; set; }
+        public double Val2 { get; set; }
+    }
+
+    public class CalculationItemEmptyException<T> : Exception
+    {
+        ICalc<T> _exceptionInstance = null;
+        public ICalc<T> ExceptionInstance
+        {
+            get
+            {
+                return _exceptionInstance;
+            }
+        }
+        public CalculationItemEmptyException(ICalc<T> exceptionInstance) : base()
+        {
+
+        }
+    }
+
     public class DoubleCalc : ICalc<double>
     {
-        private double val1;
-        private double val2;
 
-        public double Val1
-        {
-            set
-            {
-                val1 = value;
-            }
-        }
-
-        public double Val2
-        {
-            set
-            {
-                val2 = value;
-            }
-        }
-
-        public DoubleCalc(double val1, double val2) { Val1 = val1; Val2 = val2; }
+        public Calcitem<double> _calculationItem;
 
         public Result<double> Summ()
         {
             Result<double> res = new Result<double>();
+            if (_calculationItem == null)
+            {
+                throw new CalculationItemEmptyException<double>(this);
+            }
             try
             {
-                res.Value = val1 + val2;
+                res.Value = _calculationItem.Val1 + _calculationItem.Val2;
             }
             catch
             {

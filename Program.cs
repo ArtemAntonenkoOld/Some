@@ -4,28 +4,23 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ConsoleApplication5
 {
+    struct LoggerConfig
+    {
+     
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            if (CalculationInstanceFactory.GetType() == typeof(int))
-            {
-                Result<int> r = CalculationInstanceFactory.GetInstance(Types.Int);
-            }
-            else
-            if (CalculationInstanceFactory.GetType() == typeof(double))
-            {
-                CalculationInstanceFactory.GetInstance(Types.Double);
-            }
-            else throw new ArgumentOutOfRangeException("Main start");
-
+           
 
             
+            //BinaryFormatter
             
-
             /* Сериализация
              
                 string path = @"C:\Users\SUPER\Documents\Visual Studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\note.txt";
