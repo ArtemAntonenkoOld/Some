@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoubleCalc.cs" />
+    <Compile Include="Factories\CalculationInstanceFactory.cs" />
     <Compile Include="ICalc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
