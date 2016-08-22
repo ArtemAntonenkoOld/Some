@@ -21,6 +21,6 @@ namespace ConsoleApplication5
                 break;
             }
             return res;
-            }
+        }
     }
 }
