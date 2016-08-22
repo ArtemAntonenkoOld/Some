@@ -7,3 +7,6 @@ C:\Users\SUPER\Documents\Visual Studio 2015\Projects\ConsoleApplication5\Console
 C:\Users\Игорь\Desktop\Новая папка\Huina\bin\Debug\ConsoleApplication5.exe.config
 C:\Users\Игорь\Desktop\Новая папка\Huina\obj\Debug\ConsoleApplication5.exe
 C:\Users\Игорь\Desktop\Новая папка\Huina\obj\Debug\ConsoleApplication5.pdb
+C:\Users\Игорь\Desktop\Новая папка\Huina\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
+C:\Users\Игорь\Desktop\Новая папка\Huina\bin\Debug\ConsoleApplication5.exe
+C:\Users\Игорь\Desktop\Новая папка\Huina\bin\Debug\ConsoleApplication5.pdb

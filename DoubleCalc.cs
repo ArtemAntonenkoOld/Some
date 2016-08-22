@@ -17,8 +17,8 @@ namespace ConsoleApplication5
             }
             catch
             {
-                Console.WriteLine("Error");
-                break;
+                res.Error = true;
+                res.ErrorMessage = "Ошибка при выполнении операции";
             }
             return res;
         }

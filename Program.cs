@@ -11,14 +11,16 @@ namespace ConsoleApplication5
     {
         static void Main(string[] args)
         {
-            
+            //Test
             double a = double.Parse(Console.ReadLine()); 
             double b = double.Parse(Console.ReadLine());
-            
+            DoubleCalc d = new DoubleCalc();
+            Result<double> n = d.Summ(a,b);
+            Console.WriteLine(n.Value);
+            Console.ReadLine();        
 
-
-
-            /*
+            /* Сериализация
+             
                 string path = @"C:\Users\SUPER\Documents\Visual Studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\note.txt";
                 Serialize s = new Serialize();
 

@@ -9,6 +9,5 @@ namespace ConsoleApplication5
     public interface ICalc<T>
     {
         Result<T> Summ(T val1, T val2);
-        string poslat();
     }
 }

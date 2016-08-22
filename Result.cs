@@ -8,8 +8,47 @@ namespace ConsoleApplication5
 {
     public class Result<T>
     {
-        T Value;
-        bool error;
-        string errorMessage;
+        private T value;
+        private bool error;
+        private string errorMessage;
+
+        public T Value
+        {
+            get
+            {
+                return value;
+            }
+
+            set
+            {
+                this.value = value;
+            }
+        }
+
+        public bool Error
+        {
+            get
+            {
+                return error;
+            }
+
+            set
+            {
+                error = value;
+            }
+        }
+
+        public string ErrorMessage
+        {
+            get
+            {
+                return errorMessage;
+            }
+
+            set
+            {
+                errorMessage = value;
+            }
+        }
     }
 }
