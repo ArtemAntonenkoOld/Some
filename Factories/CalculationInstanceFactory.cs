@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,8 @@ namespace ConsoleApplication5
             switch (typeof(item))
             {
                 case Double.getType():
-                    return;
+                    return ;
+                case 1: return new DoubleCalc(login, pass);
                 default:
                     throw new ArgumentOutOfRangeException("T");
             }

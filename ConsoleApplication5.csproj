@@ -57,8 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoubleCalc.cs" />
+    <Compile Include="Реализации\IntCalc.cs" />
+    <Compile Include="Реализации\DoubleCalc.cs" />
     <Compile Include="Factories\CalculationInstanceFactory.cs" />
+    <Compile Include="Factories\Class1.cs" />
     <Compile Include="ICalc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +83,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
