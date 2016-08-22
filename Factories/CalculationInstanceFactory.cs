@@ -7,15 +7,45 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
+    public enum Types { Int, Double };
+
     class CalculationInstanceFactory
     {
-        private Factory GetInstance<T>(T item)
+
+        public static new Type GetType()
         {
-            switch (typeof(item))
+            Console.WriteLine("Укажите тип");
+            string t = Console.ReadLine();
+            switch (t)
             {
-                case Double.getType():
-                    return ;
-                case 1: return new DoubleCalc(login, pass);
+                case "integer": return typeof(int);
+                case "double": return typeof(double);
+                default: throw new ArgumentOutOfRangeException("Wrong type!");
+            }
+        }
+
+        public static object GetInstance(Types item)
+        {
+            
+            switch (item)
+            {
+                
+                case Types.Double:
+                Console.WriteLine("Введите значения");
+                DoubleCalc o = new DoubleCalc(
+                Convert.ToDouble(Console.ReadLine()), 
+                Convert.ToDouble(Console.ReadLine())
+                );
+                    return o.Summ();
+
+                case Types.Int:
+                Console.WriteLine("Введите значения");
+                IntCalc p = new IntCalc(
+                Convert.ToInt16(Console.ReadLine()),
+                Convert.ToInt16(Console.ReadLine())
+                );
+                    return p.Summ();
+
                 default:
                     throw new ArgumentOutOfRangeException("T");
             }

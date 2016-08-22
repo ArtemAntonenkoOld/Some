@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
-    public class DoubleCalc : ICalc<double>
+    public class IntCalc : ICalc<int>
     {
-        private double val1;
-        private double val2;
+        private int val1;
+        private int val2;
 
-        public double Val1
+        public int Val1
         {
             set
             {
@@ -19,7 +19,7 @@ namespace ConsoleApplication5
             }
         }
 
-        public double Val2
+        public int Val2
         {
             set
             {
@@ -27,9 +27,11 @@ namespace ConsoleApplication5
             }
         }
 
-        public Result<double> Summ()
+        public IntCalc(int val1, int val2) { Val1 = val1; Val2 = val2; }
+
+        public Result<int> Summ()
         {
-            Result<double> res = new Result<double>();
+            Result<int> res = new Result<int>();
             try
             {
                 res.Value = val1 + val2;

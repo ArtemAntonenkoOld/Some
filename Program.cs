@@ -11,17 +11,20 @@ namespace ConsoleApplication5
     {
         static void Main(string[] args)
         {
-            
+            if (CalculationInstanceFactory.GetType() == typeof(int))
+            {
+                Result<int> r = CalculationInstanceFactory.GetInstance(Types.Int);
+            }
+            else
+            if (CalculationInstanceFactory.GetType() == typeof(double))
+            {
+                CalculationInstanceFactory.GetInstance(Types.Double);
+            }
+            else throw new ArgumentOutOfRangeException("Main start");
 
 
             
-            //Test
-            double a = double.Parse(Console.ReadLine()); 
-            double b = double.Parse(Console.ReadLine());
-            DoubleCalc d = new DoubleCalc();
-            Result<double> n = d.Summ(a,b);
-            Console.WriteLine(n.Value);
-            Console.ReadLine();        
+            
 
             /* Сериализация
              
