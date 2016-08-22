@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
-    public enum Types { Int, Double };
+ 
     //struct TypeConfig 
     //{
     //    static Dictionary<Types,Tuple<Type>> 

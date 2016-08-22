@@ -12,7 +12,7 @@ namespace ConsoleApplication5
     {
      
     }
-    class Program
+    class BinaryFormatter
     {
         static void Main(string[] args)
         {
