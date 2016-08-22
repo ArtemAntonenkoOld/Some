@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
-    class DoubleCalc : ICalc<double>
+    public class DoubleCalc : ICalc<double>
     {
         public Result<double> Summ(double val1, double val2)
         {
             Result<double> res = new Result<double>();
             try
             {
-                res.val = val1 + val2;
+                res.Value = val1 + val2;
             }
             catch
             {

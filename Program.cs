@@ -11,20 +11,29 @@ namespace ConsoleApplication5
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Users\SUPER\Documents\Visual Studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\note.txt";
-            Serialize s = new Serialize();
+            double a = double.Parse(Console.ReadLine()); 
+            double b = double.Parse(Console.ReadLine());
             
-            try
-            {
-                
-                var a = Convert.ToDouble(Console.ReadLine());
-                s.NewData(path,a);
-                s.EndData(path);
-            }
-            catch (Exception e)
-            {
-                s.ExeptionData(path, e.Message);
-            }
+
+
+
+            /*
+                string path = @"C:\Users\SUPER\Documents\Visual Studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\note.txt";
+                Serialize s = new Serialize();
+
+                try
+                {
+
+                    var a = Convert.ToDouble(Console.ReadLine());
+                    s.NewData(path,a);
+                    s.EndData(path);
+                }
+                catch (Exception e)
+                {
+                    s.ExeptionData(path, e.Message);
+                }
+
+            */
 
         }
     }
